@@ -11,7 +11,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 /**
- * Version 0.1
+ * Version 0.2
  * @author htha9587
  * 6-5-16
  */
@@ -27,6 +27,11 @@ public class BrowserController implements Initializable
 	@FXML private Button button4;
 	@FXML private TextField searcher;
 	@FXML private Button go;
+	
+	
+	/**
+	 * Initializes WebView and has the URL to load my Github page when the browser opens up.
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
@@ -36,27 +41,42 @@ public class BrowserController implements Initializable
 		
 	}
 
-	
+	/**
+	 * Loads my Github page.
+	 * @param event
+	 */
 	public void button1(ActionEvent event)
 	{
 		engine.load("https://github.com/htha9587");
 	}
-	
+	/**
+	 * Opens up a website that uses Javascript.
+	 * @param event
+	 */
 	public void button2(ActionEvent event)
 	{
 		engine.executeScript("window.location = \"http://www.ibm.com/design///\";");
 	}
-	
+	/**
+	 * Runs this HTML Code.
+	 * @param event
+	 */
 	public void button3(ActionEvent event)
 	{
 		engine.loadContent("<html><body><h1>BrowserFX</h1><body></html>");
 	}
-	
+	/**
+	 * Refreshes the browser.
+	 * @param event
+	 */
 	public void button4(ActionEvent event)
 	{
 		engine.reload();
 	}
-	
+	/**
+	 * Searches the website.
+	 * @param event
+	 */
 	public void go(ActionEvent event)
 	{
 		engine.load(searcher.getText());

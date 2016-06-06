@@ -2,7 +2,7 @@ package application.Browser;
 	
 
 /**
- * Version 0.1
+ * Version 0.2
  * @author htha9587
  * 6-5-16
  */
@@ -17,6 +17,9 @@ import javafx.scene.layout.AnchorPane;
 
 
 public class BrowserMain extends Application {
+	/**
+	 * Grabs FXML and CSS and uses them in conjunction to open up the scene.
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -30,7 +33,10 @@ public class BrowserMain extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * Launches the program.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
